@@ -1,0 +1,38 @@
+﻿{
+  "name": "@paperclipai/adapter-bob-shell",
+  "version": "0.1.0",
+  "description": "Paperclip external adapter for IBM Bob Shell (bob run) non-interactive task runner",
+  "license": "MIT",
+  "homepage": "https://github.com/ludovic-gasc/paperclip-adapter-bob-shell",
+  "bugs": { "url": "https://github.com/ludovic-gasc/paperclip-adapter-bob-shell/issues" },
+  "repository": { "type": "git", "url": "https://github.com/ludovic-gasc/paperclip-adapter-bob-shell" },
+  "type": "module",
+  "exports": {
+    ".":        { "types": "./dist/index.d.ts",            "import": "./dist/index.js" },
+    "./server": { "types": "./dist/server/index.d.ts",     "import": "./dist/server/index.js" },
+    "./ui":     { "types": "./dist/ui/index.d.ts",         "import": "./dist/ui/index.js" },
+    "./cli":    { "types": "./dist/cli/index.d.ts",        "import": "./dist/cli/index.js" }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue"
+  },
+  "dependencies": {
+    "@paperclipai/adapter-utils": "^0.3.1",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "engines": { "node": ">=24.11.0" },
+  "keywords": ["paperclip", "adapter", "ibm", "bob", "bob-shell", "ai", "agent"]
+}
