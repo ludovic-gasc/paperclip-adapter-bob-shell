@@ -1,4 +1,4 @@
-﻿# @paperclipai/adapter-bob-shell
+# @paperclipai/adapter-bob-shell
 
 External Paperclip adapter for **IBM Bob Shell** (`bob run`) — runs IBM Bob in
 non-interactive mode as a managed AI agent inside a Paperclip company.
